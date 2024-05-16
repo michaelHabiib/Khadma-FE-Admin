@@ -1,0 +1,17 @@
+<app-header
+  backgroundColor="#7984c7"
+  textColor="#7984c7"
+  title="Users"
+></app-header>
+<app-table
+  [tableData]="data"
+  [tableColumns]="tableColumns"
+  headerBackgroundColor="#7984c7"
+  headerTextColor="white"
+  [isTableRowsEditable]="true"
+  [isTableRowsDeletable]="true"
+  [isTablePaginatable]="true"
+  (rowClicked)="getAllUsers($event.pageIndex, $event.pageSize)"
+  [componentForm]="componentForm"
+  (deleteRow)="deleteRow($event)"
+></app-table>
